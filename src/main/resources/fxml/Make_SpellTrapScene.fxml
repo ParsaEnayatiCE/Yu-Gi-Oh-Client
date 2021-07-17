@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@../css/makeMS.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GUI.MakeSpellTrapSceneController">
+   <children>
+      <Label layoutX="249.0" layoutY="59.0" prefHeight="38.0" prefWidth="42.0" text="name:" />
+      <TextField fx:id="cardName" layoutX="296.0" layoutY="65.0" prefHeight="26.0" prefWidth="237.0" />
+      <ImageView fx:id="cardImage" fitHeight="279.0" fitWidth="237.0" layoutX="297.0" layoutY="96.0" onDragDropped="#handleDroppedImage" onDragOver="#handleDragOver" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="pullImageLabel" layoutX="340.0" layoutY="175.0" prefHeight="96.0" prefWidth="150.0" text="pull the card picture to here" />
+      <Label layoutX="222.0" layoutY="386.0" prefHeight="38.0" prefWidth="73.0" text="description:" />
+      <TextArea fx:id="cardDescription" layoutX="295.0" layoutY="386.0" prefHeight="171.0" prefWidth="238.0" />
+      <Button layoutX="634.0" layoutY="452.0" mnemonicParsing="false" onAction="#calculate" prefHeight="38.0" prefWidth="150.0" text="calculate" />
+      <Button layoutX="634.0" layoutY="507.0" mnemonicParsing="false" onAction="#makeSpellTrap" prefHeight="38.0" prefWidth="150.0" text="make spell or trap" />
+      <Button layoutX="46.0" layoutY="507.0" mnemonicParsing="false" onAction="#goBack" prefHeight="38.0" prefWidth="150.0" text="back" />
+      <Label layoutX="559.0" layoutY="177.0" prefHeight="38.0" prefWidth="89.0" text="effects:" />
+      <CheckBox fx:id="killMonsterCheckBox" layoutX="563.0" layoutY="214.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="218.0" text="kill the most expensive rival monster" textFill="WHITE" />
+      <CheckBox fx:id="killSpellCheckBox" layoutX="563.0" layoutY="245.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="229.0" text="kill the most expensive rival spell trap" textFill="WHITE" />
+      <CheckBox fx:id="increaseLPCheckBox" layoutX="563.0" layoutY="271.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="229.0" text="increase life point by 500" textFill="WHITE" />
+      <CheckBox fx:id="decreaseLPCheckBox" layoutX="563.0" layoutY="301.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="229.0" text="decrease rival life point by 500" textFill="WHITE" />
+      <Label fx:id="statusLabel" layoutX="298.0" layoutY="33.0" prefHeight="18.0" prefWidth="218.0" />
+      <Label layoutX="357.0" layoutY="576.0" prefHeight="38.0" prefWidth="50.0" text="price: " />
+      <Label fx:id="priceLabel" layoutX="415.0" layoutY="576.0" prefHeight="38.0" prefWidth="80.0" text="0" />
+      <Label layoutX="47.0" layoutY="177.0" prefHeight="38.0" prefWidth="98.0" text="icon:" />
+      <ChoiceBox fx:id="iconChoiceBox" layoutX="45.0" layoutY="210.0" prefWidth="150.0" />
+      <ToggleButton fx:id="isTrapToggleButton" layoutX="73.0" layoutY="65.0" mnemonicParsing="false" text="trap" />
+      <ToggleButton fx:id="isUnlimitedToggleButton" layoutX="659.0" layoutY="65.0" mnemonicParsing="false" text="unlimited" />
+   </children>
+</AnchorPane>

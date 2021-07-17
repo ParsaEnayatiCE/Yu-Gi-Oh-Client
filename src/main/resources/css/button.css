@@ -1,0 +1,8 @@
+.button {
+    -fx-background-color: Yellow;
+    -fx-arc-height: 10;
+    -fx-arc-width: 10;
+    -fx-text-fill: Blue;
+    -fx-font-size: 15;
+    -fx-font-family: "Times New Roman";
+}

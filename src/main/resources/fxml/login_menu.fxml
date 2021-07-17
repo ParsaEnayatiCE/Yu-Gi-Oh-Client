@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GUI.LoginControllerGUI">
+   <children>
+      <TextField fx:id="login_Username" layoutX="14.0" layoutY="186.0" prefHeight="67.0" prefWidth="174.0" promptText="Please Enter Your Username" />
+      <TextField fx:id="loign_Password" layoutX="14.0" layoutY="267.0" prefHeight="67.0" prefWidth="174.0" promptText="Please Enter Your Password" />
+      <Button layoutX="14.0" layoutY="345.0" mnemonicParsing="false" onAction="#login" prefHeight="74.0" prefWidth="174.0" text="Submit" textAlignment="CENTER" textFill="#1a1918">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="549.0" fitWidth="582.0" layoutX="228.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Daco_6123497.png" />
+         </image>
+      </ImageView>
+      <Label layoutY="83.0" prefHeight="63.0" prefWidth="521.0" text="Login to your account and play with your friends">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="138.0" layoutX="652.0" onMouseClicked="#exit" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/pngfind.com-black-button-png-49788.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="69.0" layoutX="573.0" layoutY="-1.0" onMouseClicked="#returnToStart" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/return_bt.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="sound" fitHeight="63.0" fitWidth="84.0" layoutY="2.0" onMouseClicked="#muteAndUnmute" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/unmute.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

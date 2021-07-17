@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@../css/changeAvatar.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GUI.ProfileMenuControllerGUI">
+   <children>
+      <GridPane layoutX="69.0" layoutY="122.0" prefHeight="342.0" prefWidth="662.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="one" depthTest="DISABLE" fitHeight="210.0" fitWidth="153.0" onMouseClicked="#setAvatar" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Avatars/YamiYugi-DULI.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="two" fitHeight="206.0" fitWidth="166.0" onMouseClicked="#setAvatar" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@../image/Avatars/YamiMarik-DULI.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="three" fitHeight="205.0" fitWidth="124.0" onMouseClicked="#setAvatar" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+               <image>
+                  <Image url="@../image/Avatars/WeevilUnderwood-DULI.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="five" fitHeight="196.0" fitWidth="166.0" onMouseClicked="#setAvatar" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../image/Avatars/SetoKaiba-DL.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="six" fitHeight="189.0" fitWidth="101.0" onMouseClicked="#setAvatar" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../image/Avatars/RexRaptor-DULI.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="seven" fitHeight="197.0" fitWidth="159.0" onMouseClicked="#setAvatar" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../image/Avatars/MaximillionPegasus-DULI.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="eight" fitHeight="195.0" fitWidth="156.0" onMouseClicked="#setAvatar" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@../image/Avatars/MakoTsunami-DULI.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="four" fitHeight="204.0" fitWidth="247.0" onMouseClicked="#setAvatar" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+               <image>
+                  <Image url="@../image/Avatars/sss.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </GridPane>
+      <ImageView fitHeight="98.0" fitWidth="87.0" layoutX="699.0" layoutY="513.0" onMouseClicked="#nextAvatarMenu" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/agt_forward.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="69.0" layoutX="697.0" layoutY="8.0" onMouseClicked="#returnToProfileMneu" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/return_bt.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

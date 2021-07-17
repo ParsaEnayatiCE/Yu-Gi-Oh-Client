@@ -1,0 +1,7 @@
+.scroll-pane {
+    -fx-background-color: #0000ff;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}

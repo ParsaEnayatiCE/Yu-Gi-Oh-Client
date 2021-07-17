@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@../css/duel_multi_menu.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GUI.DuelControllerGUI">
+   <children>
+      <Label layoutX="222.0" layoutY="73.0" prefHeight="85.0" prefWidth="305.0" text="Search For The Second Player" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="secondUsernameForMulti" layoutX="206.0" layoutY="208.0" prefHeight="57.0" prefWidth="335.0" promptText="Please Enter Second Player's Username">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="roundsMulti" layoutX="206.0" layoutY="272.0" prefHeight="57.0" prefWidth="335.0" promptText="Please Enter Rounds To Play (1 or 3)">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button layoutX="305.0" layoutY="340.0" mnemonicParsing="false" onAction="#multiPlayerStart" prefHeight="85.0" prefWidth="138.0" text="Submit">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="70.0" fitWidth="138.0" layoutX="658.0" layoutY="10.0" onMouseClicked="#exit" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/pngfind.com-black-button-png-49788.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="69.0" layoutX="581.0" layoutY="9.0" onMouseClicked="#returnToDuelMenu" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/return_bt.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

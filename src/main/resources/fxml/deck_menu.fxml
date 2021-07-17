@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchor" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GUI.DeckControllerGUI">
+   <children>
+      <ImageView accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" layoutX="750.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/return_bt.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="add" fitHeight="30.0" fitWidth="30.0" layoutX="130.0" layoutY="10.0" onMouseClicked="#addDeck" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/add.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="remove" fitHeight="35.0" fitWidth="35.0" layoutX="170.0" layoutY="9.0" onMouseClicked="#removeDeck" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/remove.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="active" fitHeight="40.0" fitWidth="40.0" layoutX="210.0" layoutY="7.0" onMouseClicked="#setActive" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/set-activate.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="deckName" layoutX="5.0" layoutY="13.0" prefHeight="10.0" prefWidth="120.0" promptText="deck name" />
+   </children>
+</AnchorPane>

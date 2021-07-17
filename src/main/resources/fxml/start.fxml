@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@../css/main_menu.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GUI.LoginControllerGUI">
+   <children>
+      <Button layoutX="14.0" layoutY="253.0" mnemonicParsing="false" onAction="#enterLoginMenu" prefHeight="47.0" prefWidth="174.0" text="Login" textAlignment="CENTER" textFill="#3217b9" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="14.0" layoutY="327.0" mnemonicParsing="false" onAction="#enterRegisterMenu" prefHeight="47.0" prefWidth="174.0" text="Register" textAlignment="CENTER" textFill="#3217b9" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="14.0" layoutY="396.0" mnemonicParsing="false" onAction="#creditScene" prefHeight="47.0" prefWidth="174.0" text="Credit" textAlignment="CENTER" textFill="#3217b9" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="sound" fitHeight="63.0" fitWidth="84.0" layoutX="721.0" layoutY="7.0" onMouseClicked="#muteAndUnmute" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/unmute.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

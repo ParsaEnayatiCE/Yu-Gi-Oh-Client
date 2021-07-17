@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="userInfoAnchor" prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@../css/userInfo.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GUI.ProfileMenuControllerGUI">
+   <children>
+      <Label layoutX="57.0" layoutY="69.0" prefHeight="73.0" prefWidth="157.0" text="Username:">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="142.0" prefHeight="73.0" prefWidth="157.0" text="Nickname:">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="205.0" prefHeight="73.0" prefWidth="169.0" text="Total Score:">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="278.0" prefHeight="73.0" prefWidth="157.0" text="Money:">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="81.0" fitWidth="69.0" layoutX="707.0" layoutY="14.0" onMouseClicked="#returnToProfileMneu" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/return_bt.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@../css/mian.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GUI.MainMenuControllerGUI">
+   <children>
+      <Button layoutX="-8.0" layoutY="68.0" mnemonicParsing="false" onAction="#enterDuelMenu" onMouseEntered="#highlightBt2" onMouseExited="#returnNormalBt2" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: purple;" text="Duel" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="8.0" layoutY="547.0" mnemonicParsing="false" onAction="#logout" prefHeight="44.0" prefWidth="98.0" text="logout">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button layoutX="-12.0" layoutY="202.0" mnemonicParsing="false" onAction="#enterShopMenu" onMouseEntered="#highlightBt2" onMouseExited="#returnNormalBt2" prefHeight="51.0" prefWidth="124.0" style="-fx-background-color: purple;" text="Shop" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="-1.0" layoutY="267.0" mnemonicParsing="false" onAction="#enterProfileMenu" onMouseEntered="#highlightBt2" onMouseExited="#returnNormalBt2" prefHeight="55.0" prefWidth="138.0" style="-fx-background-color: purple;" text="Profile" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="-7.0" layoutY="399.0" mnemonicParsing="false" onAction="#enterImportMenu" onMouseEntered="#highlightBt2" onMouseExited="#returnNormalBt2" prefHeight="66.0" prefWidth="226.0" style="-fx-background-color: purple;" text="Import Export" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="-1.0" layoutY="134.0" mnemonicParsing="false" onAction="#enterDeckMenu" onMouseEntered="#highlightBt2" onMouseExited="#returnNormalBt2" prefHeight="68.0" prefWidth="192.0" style="-fx-background-color: purple;" text="Deck Menu" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="70.0" fitWidth="138.0" layoutX="648.0" onMouseClicked="#exit" onMouseEntered="#highlightBt" onMouseExited="#returnNormalBt" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/pngfind.com-black-button-png-49788.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="mainsound" fitHeight="63.0" fitWidth="84.0" layoutX="8.0" layoutY="2.0" onMouseClicked="#muteAndUnmute" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/unmute.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button layoutX="-12.0" layoutY="465.0" mnemonicParsing="false" onAction="#scoreboradScene" onMouseEntered="#highlightBt2" onMouseExited="#returnNormalBt2" prefHeight="65.0" prefWidth="213.0" style="-fx-background-color: purple;" text="Scoreboard" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="-1.0" layoutY="333.0" mnemonicParsing="false" onAction="#enterMakeCardMenu" onMouseEntered="#highlightBt2" onMouseExited="#returnNormalBt2" prefHeight="66.0" prefWidth="192.0" style="-fx-background-color: purple;" text="Make Card" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

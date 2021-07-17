@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="root2" stylesheets="@../css/import.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GUI.ExportSceneController">
+   <children>
+      <Label fx:id="statusLabel" layoutX="233.0" layoutY="25.0" prefHeight="43.0" prefWidth="334.0" />
+      <ToggleButton fx:id="asJsonToggleButton" layoutX="57.0" layoutY="181.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="as json" />
+      <TextField fx:id="cardName" layoutX="57.0" layoutY="144.0" />
+      <Label layoutX="57.0" layoutY="120.0" prefHeight="18.0" prefWidth="48.0" text="name:" />
+      <ImageView fx:id="cardImageView" fitHeight="395.0" fitWidth="288.0" layoutX="413.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="27.0" layoutY="542.0" mnemonicParsing="false" onAction="#goBack" prefHeight="34.0" prefWidth="133.0" text="back" />
+      <Button layoutX="645.0" layoutY="542.0" mnemonicParsing="false" onAction="#export" prefHeight="34.0" prefWidth="133.0" text="export" />
+   </children>
+</AnchorPane>
