@@ -1,5 +1,7 @@
 package models;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 
 public class Player {
@@ -77,5 +79,10 @@ public class Player {
     public void setMaxLifePoint(int lifePoint) {
         if (lifePoint > this.maxLifePoint)
             this.maxLifePoint = lifePoint;
+    }
+
+    public void updateBoard(String json) {
+        Gson gson = new Gson();
+        this.setPlayerBoard(gson.fromJson(json, Board.class));
     }
 }

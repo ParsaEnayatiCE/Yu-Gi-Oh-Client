@@ -25,11 +25,11 @@ public class ConnectionController {
         return socket;
     }
 
-    public DataInputStream getDataInputStream() {
+    public static DataInputStream getDataInputStream() {
         return dataInputStream;
     }
 
-    public DataOutputStream getDataOutputStream() {
+    public static DataOutputStream getDataOutputStream() {
         return dataOutputStream;
     }
 }

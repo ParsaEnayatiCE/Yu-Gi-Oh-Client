@@ -12,7 +12,8 @@ import java.util.Objects;
 //-----------------------------------PLEASE LOGIN FIRST NOT FIXED-------------------
 
 public class LoginMenuController {
-    private ConnectionController connectionController = new ConnectionController();
+    public static User currentUser = null;
+    private final ConnectionController connectionController = new ConnectionController();
     public static boolean isLoggedOn = false;
     private static String token = "";
 
@@ -24,9 +25,9 @@ public class LoginMenuController {
     public String loginUSer(String username, String password) {
         String forServer = "login-"+username+"-"+password;
         try {
-            connectionController.getDataOutputStream().writeUTF(forServer);
-            connectionController.getDataOutputStream().flush();
-            String serverResponse = connectionController.getDataInputStream().readUTF();
+            ConnectionController.getDataOutputStream().writeUTF(forServer);
+            ConnectionController.getDataOutputStream().flush();
+            String serverResponse = ConnectionController.getDataInputStream().readUTF();
             String[] temp = serverResponse.split(" ");
             if (!serverResponse.equals(StatusEnum.USERNAME_AND_PASSWORD_MISMATCH.getStatus()) &&
             !temp[0].equals("There")){

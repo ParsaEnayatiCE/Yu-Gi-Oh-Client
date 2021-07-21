@@ -51,7 +51,8 @@ public enum StatusEnum {
     CARD_BOUGHT_SUCCESSFULLY("you bought the card successfully"),
     IMPORTED_SUCCESSFULLY("card imported successfully!"),
     EXPORTED_SUCCESSFULLY("card exported successfully!"),
-    CARD_NOT_FOUND("card not found!");
+    CARD_NOT_FOUND("card not found!"),
+    SERVER_CONNECTION_FAILED("server connection failed");
     private String status;
 
     StatusEnum(String status){

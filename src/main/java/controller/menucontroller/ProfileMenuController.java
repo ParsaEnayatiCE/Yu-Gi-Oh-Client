@@ -14,6 +14,9 @@ import java.io.IOException;
 public class ProfileMenuController {
     private ConnectionController connectionController = new ConnectionController();
 
+    public ProfileMenuController(User currentUser) {
+    }
+
     public String changeNickname(String newNickname) {
         String forServer = "changeNickname-"+newNickname+"-"+LoginMenuController.getToken();
         try {
