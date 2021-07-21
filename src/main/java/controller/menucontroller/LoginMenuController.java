@@ -1,54 +1,59 @@
 package controller.menucontroller;
 
+import controller.ConnectionController;
 import view.MenuEnum;
 import view.ProgramController;
 import view.StatusEnum;
 import models.User;
 
+import java.io.IOException;
 import java.util.Objects;
 
 //-----------------------------------PLEASE LOGIN FIRST NOT FIXED-------------------
 
 public class LoginMenuController {
-    public static User currentUser;
+    private ConnectionController connectionController = new ConnectionController();
     public static boolean isLoggedOn = false;
+    private static String token = "";
 
-    private boolean doesUserExist(String username) {
-        for (User user : User.allUsers) {
-            if (user.getUserName().equals(username)) {
-                return true;
-            }
-        }
-        return false;
+    public static String getToken() {
+        return token;
     }
 
-    private boolean isPasswordCorrect(String username, String password) {
-        return Objects.requireNonNull(User.getUserByUserName(username)).getPassword().equals(password);
-    }
 
     public String loginUSer(String username, String password) {
-        if (!doesUserExist(username))
-            return "There is no user with username " + username;
-
-        if (!isPasswordCorrect(username, password))
-            return StatusEnum.USERNAME_AND_PASSWORD_MISMATCH.getStatus();
-
-
-        currentUser = User.getUserByUserName(username);
-        isLoggedOn = true;
-        ProgramController.currentMenu = MenuEnum.MAIN_MENU;
-        return StatusEnum.USER_LOGIN_SUCCESSFULLY.getStatus();
+        String forServer = "login-"+username+"-"+password;
+        try {
+            connectionController.getDataOutputStream().writeUTF(forServer);
+            connectionController.getDataOutputStream().flush();
+            String serverResponse = connectionController.getDataInputStream().readUTF();
+            String[] temp = serverResponse.split(" ");
+            if (!serverResponse.equals(StatusEnum.USERNAME_AND_PASSWORD_MISMATCH.getStatus()) &&
+            !temp[0].equals("There")){
+                isLoggedOn = true;
+                token = serverResponse;
+                return StatusEnum.USER_LOGIN_SUCCESSFULLY.getStatus();
+            }
+            else {
+                return serverResponse;
+            }
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        return "Error";
     }
 
     public String createUser(String username, String nickname, String password) {
-        if (User.isUserNameTaken(username))
-            return "user with username " + username + " already exists";
-
-        if (User.isNickNameTaken(nickname))
-            return "user with nickname " + nickname + " already exists";
-
-        currentUser = new User(username, nickname, password);
-        return StatusEnum.USER_CREATE_SUCCESSFULLY.getStatus();
+        String forServer = "register-"+username+"-"+nickname+"-"+password;
+        try {
+            connectionController.getDataOutputStream().writeUTF(forServer);
+            connectionController.getDataOutputStream().flush();
+            String serverResponse = connectionController.getDataInputStream().readUTF();
+            return serverResponse;
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        return "Error";
     }
 
 }

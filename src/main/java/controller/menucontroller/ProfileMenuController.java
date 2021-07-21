@@ -4,44 +4,54 @@ package controller.menucontroller;
 /*------------------CURRENT USER NOT FIXED-------------*/
 
 
+import controller.ConnectionController;
 import models.User;
 import view.StatusEnum;
 
+import java.io.IOException;
+
 
 public class ProfileMenuController {
-
-    private final User currentUser;
-
-    public ProfileMenuController(User user) {
-        this.currentUser = user;
-    }
+    private ConnectionController connectionController = new ConnectionController();
 
     public String changeNickname(String newNickname) {
-        if (User.isNickNameTaken(newNickname))
-            return "user with nickname " + newNickname + " already exists";
-
-        currentUser.setNickName(newNickname);
-        return StatusEnum.CHANGE_NICKNAME_SUCCESSFULLY.getStatus();
+        String forServer = "changeNickname-"+newNickname+"-"+LoginMenuController.getToken();
+        try {
+            connectionController.getDataOutputStream().writeUTF(forServer);
+            connectionController.getDataOutputStream().flush();
+            String serverResponse = connectionController.getDataInputStream().readUTF();
+            return serverResponse;
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        return "Error";
     }
 
     public String changePass(String oldPass, String newPass) {
-        if (!currentUser.getPassword().equals(oldPass))
-            return StatusEnum.CURRENT_PASSWORD_INVALIDITY.getStatus();
-
-        if (currentUser.getPassword().equals(newPass))
-            return StatusEnum.ENTER_A_NEW_PASSWORD.getStatus();
-
-        currentUser.changePassword(newPass);
-        return StatusEnum.CHANGE_PASSWORD_SUCCESSFULLY.getStatus();
+        String forServer = "changePassword-"+oldPass+"-"+newPass+"-"+LoginMenuController.getToken();
+        try {
+            connectionController.getDataOutputStream().writeUTF(forServer);
+            connectionController.getDataOutputStream().flush();
+            String serverResponse = connectionController.getDataInputStream().readUTF();
+            return serverResponse;
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        return "Error";
 
     }
 
     public String changeUsername(String newUsername) {
-        if (User.isUserNameTaken(newUsername))
-            return "user with username " + newUsername + " already exists";
-
-        currentUser.setUserName(newUsername);
-        return StatusEnum.CHANGE_USERNAME_SUCCESSFULLY.getStatus();
+        String forServer = "changeUsername-"+newUsername+"-"+LoginMenuController.getToken();
+        try {
+            connectionController.getDataOutputStream().writeUTF(forServer);
+            connectionController.getDataOutputStream().flush();
+            String serverResponse = connectionController.getDataInputStream().readUTF();
+            return serverResponse;
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        return "Error";
     }
 }
 

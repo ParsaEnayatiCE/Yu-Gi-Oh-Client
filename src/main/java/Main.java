@@ -1,3 +1,4 @@
+import controller.ConnectionController;
 import controller.GUI.LoginControllerGUI;
 import controller.GUI.SceneController;
 import javafx.application.Application;
@@ -10,11 +11,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
-import models.Deck;
 import models.SaveData;
-import models.User;
-import models.cards.Card;
-import models.cards.MakeCards;
 
 import java.io.File;
 import java.io.IOException;
