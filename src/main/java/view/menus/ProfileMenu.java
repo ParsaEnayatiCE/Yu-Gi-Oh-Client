@@ -17,7 +17,7 @@ public class ProfileMenu {
 
     public void run(String command){
 
-        profileMenuController = new ProfileMenuController(currentUser);
+        profileMenuController = new ProfileMenuController();
 
         Matcher matcher;
         if ((matcher = Regex.getMatcher(command, Regex.CHANGE_PASS_1)).matches()){

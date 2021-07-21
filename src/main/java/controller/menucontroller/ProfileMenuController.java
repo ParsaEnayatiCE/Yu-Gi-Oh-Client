@@ -12,18 +12,14 @@ import java.io.IOException;
 
 
 public class ProfileMenuController {
-    private ConnectionController connectionController = new ConnectionController();
 
-    public ProfileMenuController(User currentUser) {
-    }
 
     public String changeNickname(String newNickname) {
         String forServer = "changeNickname-"+newNickname+"-"+LoginMenuController.getToken();
         try {
-            connectionController.getDataOutputStream().writeUTF(forServer);
-            connectionController.getDataOutputStream().flush();
-            String serverResponse = connectionController.getDataInputStream().readUTF();
-            return serverResponse;
+            ConnectionController.getDataOutputStream().writeUTF(forServer);
+            ConnectionController.getDataOutputStream().flush();
+            return ConnectionController.getDataInputStream().readUTF();
         } catch (IOException exception) {
             exception.printStackTrace();
         }
@@ -33,10 +29,9 @@ public class ProfileMenuController {
     public String changePass(String oldPass, String newPass) {
         String forServer = "changePassword-"+oldPass+"-"+newPass+"-"+LoginMenuController.getToken();
         try {
-            connectionController.getDataOutputStream().writeUTF(forServer);
-            connectionController.getDataOutputStream().flush();
-            String serverResponse = connectionController.getDataInputStream().readUTF();
-            return serverResponse;
+            ConnectionController.getDataOutputStream().writeUTF(forServer);
+            ConnectionController.getDataOutputStream().flush();
+            return ConnectionController.getDataInputStream().readUTF();
         } catch (IOException exception) {
             exception.printStackTrace();
         }
@@ -47,10 +42,9 @@ public class ProfileMenuController {
     public String changeUsername(String newUsername) {
         String forServer = "changeUsername-"+newUsername+"-"+LoginMenuController.getToken();
         try {
-            connectionController.getDataOutputStream().writeUTF(forServer);
-            connectionController.getDataOutputStream().flush();
-            String serverResponse = connectionController.getDataInputStream().readUTF();
-            return serverResponse;
+            ConnectionController.getDataOutputStream().writeUTF(forServer);
+            ConnectionController.getDataOutputStream().flush();
+            return ConnectionController.getDataInputStream().readUTF();
         } catch (IOException exception) {
             exception.printStackTrace();
         }

@@ -19,7 +19,7 @@ import java.io.IOException;
 public class MainMenuControllerGUI {
 
 
-    public static ProfileMenuController profileMenuController = new ProfileMenuController(LoginMenuController.currentUser);
+    public static ProfileMenuController profileMenuController = new ProfileMenuController();
     public static DuelMenuController duelMenuController = new DuelMenuController();
     public ImageView mainsound;
 
